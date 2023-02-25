@@ -7,18 +7,35 @@ type Persona struct {
 	edad   int
 }
 
+func (p *Persona) imprimir() {
+	fmt.Printf("\nNombre %s \nEdad: %d\n", p.nombre, p.edad)
+}
+
+func (p *Persona) editarNombre(nombre string) {
+	p.nombre = nombre
+}
+
+type Empleado struct {
+	Persona
+}
+
 func main() {
 	persona1 := Persona{"Esteban", 20}
 
-	fmt.Println(persona1)
-
-	persona1.nombre = "Samuel"
-	fmt.Println(persona1)
+	persona1.imprimir()
+	persona1.editarNombre("Juan")
+	persona1.imprimir()
 
 	persona2 := Persona{
 		nombre: "Julia",
 		edad:   27,
 	}
-	fmt.Println(persona2)
+
+	persona2.imprimir()
+
+	empleado1 := Empleado{}
+	empleado1.nombre = "Jorge"
+	empleado1.edad = 55
+	empleado1.imprimir()
 
 }
