@@ -1,0 +1,5 @@
+mode: set
+testing/testunitario/math.go:3.25,5.2 1 1
+testing/testunitario/math.go:7.27,8.11 1 1
+testing/testunitario/math.go:8.11,10.3 1 1
+testing/testunitario/math.go:10.8,12.3 1 1
